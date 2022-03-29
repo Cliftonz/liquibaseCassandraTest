@@ -2,14 +2,12 @@ version: '2'
 
 services:
   cassandra:
-    image: docker.io/bitnami/cassandra:4.0.3-debian-10-r29
+    image: docker.io/bitnami/cassandra:latest
     ports:
       - '7000:7000'
       - '9042:9042'
     volumes:
       - 'cassandra_data:/bitnami'
-      #- './cassandra.yaml:/bitnami/cassandra/conf/cassandra.yaml:ro'
-      #- './cassandra.yaml:/opt/bitnami/cassandra/conf/cassandra.yaml:ro'
     environment:
       - CASSANDRA_SEEDS=cassandra
       - CASSANDRA_PASSWORD_SEEDER=yes
