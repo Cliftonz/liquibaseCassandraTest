@@ -12,7 +12,7 @@ services:
       - CASSANDRA_SEEDS=cassandra
       - CASSANDRA_PASSWORD_SEEDER=yes
       - CASSANDRA_PASSWORD=cassandra
-      - CASSANDRA_AUTHENTICATOR=PasswordAuthenticator
+      #- CASSANDRA_AUTHENTICATOR=PasswordAuthenticator
 volumes:
   cassandra_data:
     driver: local
