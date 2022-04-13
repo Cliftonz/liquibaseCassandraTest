@@ -1,0 +1,21 @@
+version: '3.9'
+
+services:
+  cassandra:
+    container_name: cassandra-dev
+    # build:
+    #   args: 
+    #     - Dcassandra.config=/etc/cassandra/cassandra.yaml
+    # entrypoint: ["/bin/sh","-c"]
+    # command: 
+    # - | 
+    #   ls /etc/cassandra
+    
+    #build: .
+    image: testcassandra:latest
+    ports:
+      - 9042:9042
+
+    # volumes:
+    #   #- ./cassandra.yaml:/etc/cassandra/cassandra.yaml
+    #   - ./cassandra.yaml:/cassandra.yaml
